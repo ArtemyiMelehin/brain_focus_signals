@@ -62,7 +62,8 @@
 
 ## Данные
 
-* Во вложение к проекту есть папка: data/EEG Data, который и является исходными данными.
+* Во вложение к проекту есть папка: data/EEG Data (из архива archive.zip), который и является исходными данными.
+* В папку temp_files сохраняются промежуточные файлы.
 
 ## Выводы
 
@@ -72,16 +73,20 @@
 
 Используйте команду: ```pip install -r requirements.txt```
     
-## Установка проекта
-```
-    git clone https://github.com/ArtemyiMelehin/Time_Series_project
-```
-
 ## Использование
 * Вводная описательная информация о работе представлена в jupyter-ноутбуке Baseline.ipynb.
 
 * Все работа по улучшению Baseline, находиться в jupyter-ноутбуке prediction_of_human_condition.ipynb
 
+* Итоговый ноутбук - LSTM_SVM.ipynb 
+
+Для использования сервера вам нужно установить docker-compose. Посмотреть документацию можно по ссылке: https://docs.docker.com/compose/usage/
+
+## Установка проекта + Docker
+```
+    docker pull artikma/brain_focus_signals:latest
+    docker build -t artikma/brain_focus_signals:latest .
+```
 ## Авторы
 
 Мелехин Артемий
